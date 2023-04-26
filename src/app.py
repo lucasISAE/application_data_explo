@@ -2,57 +2,59 @@ import pandas as pd
 import random
 from dash import Dash, html, dcc, Input, Output, State
 import plotly.express as px
+import numpy as np
+
 
 #Cours bourse ################
 randomlistAMAZON = []
 for i in range(693):
-    n = random.randint(160,170)
-    randomlistAMAZON.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistAMAZON.append(n[0])
     
 randomlistBOEING = []
 for i in range(5602):
-    n = random.randint(160,170)
-    randomlistBOEING.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistBOEING.append(n[0])
     
 randomlistBP = []
 for i in range(2136):
-    n = random.randint(160,170)
-    randomlistBP.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistBP.append(n[0])
     
 randomlistGAMESTOP = []
 for i in range(12429):
-    n = random.randint(160,170)
-    randomlistGAMESTOP.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistGAMESTOP.append(n[0])
     
 randomlistHSBC = []
 for i in range(26298):
-    n = random.randint(160,170)
-    randomlistHSBC.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistHSBC.append(n[0])
     
 randomlistLVMH = []
 for i in range(26290):
-    n = random.randint(160,170)
-    randomlistLVMH.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistLVMH.append(n[0])
     
 randomlistMICROSOFT = []
 for i in range(3113):
-    n = random.randint(160,170)
-    randomlistMICROSOFT.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistMICROSOFT.append(n[0])
     
 randomlistMONSANTO = []
 for i in range(26303):
-    n = random.randint(160,170)
-    randomlistMONSANTO.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistMONSANTO.append(n[0])
     
 randomlistPFIZER = []
 for i in range(8339):
-    n = random.randint(160,170)
-    randomlistPFIZER.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistPFIZER.append(n[0])
     
 randomlistTESLA = []
 for i in range(1034):
-    n = random.randint(160,170)
-    randomlistTESLA.append(n)
+    n = np.random.normal(150,30,1)
+    randomlistTESLA.append(n[0])
     
 ######################################################################
 #vecteur date
