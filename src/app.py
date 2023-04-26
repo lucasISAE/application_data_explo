@@ -8,47 +8,47 @@ import numpy as np
 #Cours bourse ################
 randomlistAMAZON = []
 for i in range(693):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(105,15,1)
     randomlistAMAZON.append(n[0])
     
 randomlistBOEING = []
 for i in range(5602):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(200,10,1)
     randomlistBOEING.append(n[0])
     
 randomlistBP = []
 for i in range(2136):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(530,20,1)
     randomlistBP.append(n[0])
     
 randomlistGAMESTOP = []
 for i in range(12429):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(19,10,1)
     randomlistGAMESTOP.append(n[0])
     
 randomlistHSBC = []
 for i in range(26298):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(560,10,1)
     randomlistHSBC.append(n[0])
     
 randomlistLVMH = []
 for i in range(26290):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(880,30,1)
     randomlistLVMH.append(n[0])
     
 randomlistMICROSOFT = []
 for i in range(3113):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(280,15,1)
     randomlistMICROSOFT.append(n[0])
     
-randomlistMONSANTO = []
-for i in range(26303):
-    n = np.random.normal(150,30,1)
-    randomlistMONSANTO.append(n[0])
+# randomlistMONSANTO = []
+# for i in range(26303):
+#     n = np.random.normal(150,30,1)
+#     randomlistMONSANTO.append(n[0])
     
 randomlistPFIZER = []
 for i in range(8339):
-    n = np.random.normal(150,30,1)
+    n = np.random.normal(40,5,1)
     randomlistPFIZER.append(n[0])
     
 randomlistTESLA = []
@@ -94,14 +94,14 @@ tweetsLVMH.insert(2,"stock_value",randomlistLVMH)
 nom = "microsoft"
 tweetsMICROSOFT = pd.read_csv(nom+'_moy')
 tweetsMICROSOFT.insert(2,"stock_value",randomlistMICROSOFT)
-nom = "monsanto"
-tweetsMONSANTO = pd.read_csv(nom+'_moy')
-tweetsMONSANTO.insert(2,"stock_value",randomlistMONSANTO)
+# nom = "monsanto"
+# tweetsMONSANTO = pd.read_csv(nom+'_moy')
+# tweetsMONSANTO.insert(2,"stock_value",randomlistMONSANTO)
 nom = "pfizer"
 tweetsPFIZER = pd.read_csv(nom+'_moy')
 tweetsPFIZER.insert(2,"stock_value",randomlistPFIZER)
 
-groups =["TESLA", "BOEING","AMAZON","MONSANTO",
+groups =["TESLA", "BOEING","AMAZON",
  "PFIZER","MICROSOFT","LVMH","HSBC",
  "GAMESTOP","BP"]
 
@@ -177,10 +177,10 @@ def make_graphs(group):
         fig_line2 = px.line(tweetsPFIZER, x="date_created", y="stock_value", title="Stock value for PFIZER")
         fiability = 20
         
-    if group == "MONSANTO":
-        fig_line = px.line(tweetsTESLA, x="date_created", y="score", title="reputation indicator for MONSANTO")
-        fig_line2 = px.line(tweetsTESLA, x="date_created", y="stock_value", title="Stock value for MONSANTO")
-        fiability = 30
+    # if group == "MONSANTO":
+    #     fig_line = px.line(tweetsTESLA, x="date_created", y="score", title="reputation indicator for MONSANTO")
+    #     fig_line2 = px.line(tweetsTESLA, x="date_created", y="stock_value", title="Stock value for MONSANTO")
+    #     fiability = 30
 
     return [
         html.Div([
